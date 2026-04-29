@@ -1,2 +1,4 @@
-# Customer_Behavior_Analysis
-Data Analytics project on customer behaviour using Python(Pandas), Postgresql and Power Bi
+Customer Shopping Behavior AnalysisOverviewThis project provides a comprehensive end-to-end analysis of customer purchasing patterns to drive data-informed business decisions. By leveraging Python for data cleaning, PostgreSQL for advanced querying, and Power BI for interactive visualization, the project identifies key revenue drivers, customer segments, and product performance metrics.DatasetThe analysis is based on the customer_shopping_behavior.csv dataset. It contains 3,900 records detailing customer demographics (age, gender), transaction details (purchase amount, category, item), and behavioral attributes (subscription status, shipping preferences, and review ratings).
+
+ToolsVS Code: Primary IDE for Python development.Python (Pandas, SQLAlchemy): Used for Exploratory Data Analysis (EDA), data cleaning, and ETL processes.  PostgreSQL: Hosted the cleaned data for complex relational querying and segmentation. 
+Power BI: Created an interactive dashboard to visualize KPIs and customer trends. 
