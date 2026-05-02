@@ -1,46 +1,96 @@
-Customer Shopping Behavior Analysis
+🛍️ Customer Shopping Behavior Analysis
+📌 Overview
 
-Overview 
-This project provides a comprehensive end-to-end analysis of customer purchasing patterns to drive data-informed business decisions. By leveraging Python for data cleaning, PostgreSQL for advanced querying, and Power BI for interactive visualization, the project identifies key revenue drivers, customer segments, and product performance metrics.DatasetThe analysis is based on the customer_shopping_behavior.csv dataset. It contains 3,900 records detailing customer demographics (age, gender), transaction details (purchase amount, category, item), and behavioral attributes (subscription status, shipping preferences, and review ratings).
+This project presents an end-to-end data analytics workflow focused on analyzing customer purchasing behavior to generate actionable business insights.
 
-Tools
-VS Code: Primary IDE for Python development.Python (Pandas, SQLAlchemy): Used for Exploratory Data Analysis (EDA), data cleaning, and ETL processes.  PostgreSQL: Hosted the cleaned data for complex relational querying and segmentation. 
-Power BI: Created an interactive dashboard to visualize KPIs and customer trends. 
+The goal is to identify revenue drivers, customer segments, and product performance trends using a combination of data processing, SQL analysis, and interactive visualization.
 
-1. Data Cleaning (Python):
-Handled missing values in review_rating by imputing the median based on product category.  
-Standardized column names (lowercase with underscores) for database compatibility.  
-Engineered new features including age_group (binned using qcut) and purchase_frequency_days.
+📂 Dataset
+File: customer_shopping_behavior.csv
+Records: ~3,900 rows
+Features include:
+Customer demographics (age, gender)
+Transaction details (purchase amount, category, item)
+Behavioral attributes (subscription status, shipping type, review ratings)
+🛠️ Tools & Technologies
+Python (Pandas, SQLAlchemy) → Data Cleaning, EDA, ETL
+PostgreSQL → Data Storage & Advanced Querying
+Power BI → Dashboard & Data Visualization
+VS Code → Development Environment
+⚙️ Project Workflow
+1️⃣ Data Cleaning & Feature Engineering (Python)
+Handled missing values in review_rating using category-wise median imputation
+Standardized column names (lowercase, underscores)
+Created new features:
+age_group (using quantile-based binning)
+purchase_frequency_days
+2️⃣ Database Integration
+Connected Python to PostgreSQL using SQLAlchemy
+Loaded cleaned data into customer_behavior database
+Structured data into relational format for efficient querying
+3️⃣ Advanced SQL Analysis
+Revenue contribution by gender
+Customer segmentation:
+New Customers
+Returning Customers
+Loyal Customers
+Product ranking within categories
+Purchase behavior analysis
+4️⃣ Data Visualization (Power BI)
 
-2. Database Integration:
-Established a connection between Python and PostgreSQL using SQLAlchemy.  
-Automated the data load into a customer table within the customer_behavior database
+Developed an interactive dashboard to present key insights:
 
-3.Advanced SQL Querying:
-Performed multi-level analysis including revenue contribution by gender, customer segmentation (New vs. Loyal), and product ranking within categories.
-
-4.Data Visualization:
-Connected Power BI to the processed data to build a dashboard focusing on sales distribution and demographic behavior.
-
-Dashboard
-The interactive Power BI dashboard provides a high-level view of:
-Key Performance Indicators (KPIs): Total customers (3.9K), average purchase amount ($59.76), and average review rating (3.75).  
-Demographic Insights: Sales and revenue distribution across different age groups (Young Adult, Adult, Middle Aged, Senior).  
-Category Analysis: Breakdown of revenue and order volume by product categories like Clothing and Accessories.  
-Subscription Trends: Visual comparison showing that 27% of the customer base are subscribers
-
-Results
-Customer Segmentation: Successfully categorized the user base into 'New', 'Returning', and 'Loyal' segments based on historical purchase counts.  
-Revenue Drivers: Identified the top-performing product categories and determined the revenue contribution of various age demographics.  
-Shipping & Spend: Compared average purchase amounts across different shipping types to understand service-level impact on spending.  
-Subscription Value: Analyzed whether subscribed customers exhibit higher average spends and total revenue compared to non-subscribers.
-
-How to Run
-Python Environment: Install dependencies using pip install pandas sqlalchemy psycopg[binary].
-Database Setup: Ensure PostgreSQL is running and create a database named customer_behavior.
-Data Loading: Run the Jupyter Notebook/Python script to clean the customer_shopping_behavior.csv and export it to SQL.  
-Queries: Execute the provided SQL scripts in your PostgreSQL tool (e.g., pgAdmin) to generate business insights.  
-Visualization: Open the Power BI .pbix file (if provided) and refresh the data source to view the updated dashboard.
+📊 KPIs:
+Total Customers: 3.9K
+Avg Purchase Amount: $59.76
+Avg Review Rating: 3.75
+👥 Demographic Insights:
+Revenue distribution across age groups
+🛍️ Category Analysis:
+Sales by product category
+🔁 Subscription Trends:
+27% customers are subscribers
+📈 Key Insights
+Identified top-performing product categories driving revenue
+Found clear spending patterns across age groups
+Segmented customers into New, Returning, and Loyal
+Analyzed impact of subscriptions on revenue
+Compared shipping preferences vs spending behavior
+🚀 How to Run the Project
+1️⃣ Setup Python Environment
+pip install pandas sqlalchemy psycopg[binary]
+2️⃣ Database Setup
+Install and run PostgreSQL
+Create database:
+CREATE DATABASE customer_behavior;
+3️⃣ Run Data Pipeline
+Execute Python script / Jupyter Notebook to:
+Clean data
+Transform features
+Load into PostgreSQL
+4️⃣ Run SQL Queries
+Use pgAdmin or any SQL tool
+Execute analysis queries to generate insights
+5️⃣ Power BI Dashboard
+Open .pbix file
+Refresh data connection
+Explore interactive dashboard
+📁 Project Structure
+📦 Customer-Shopping-Analysis
+ ┣ 📂 data
+ ┃ ┗ customer_shopping_behavior.csv
+ ┣ 📂 scripts
+ ┃ ┗ data_cleaning.py
+ ┣ 📂 sql
+ ┃ ┗ analysis_queries.sql
+ ┣ 📂 dashboard
+ ┃ ┗ customer_analysis.pbix
+ ┣ 📄 README.md
+💡 Key Learnings
+Built a complete ETL pipeline (Python → PostgreSQL → Power BI)
+Improved data cleaning & feature engineering skills
+Gained hands-on experience in advanced SQL analysis
+Learned to transform raw data into business insights
 
 
 
