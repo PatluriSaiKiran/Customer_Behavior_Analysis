@@ -42,6 +42,8 @@ The final delivery layer transitions data from text outputs to an interactive vi
 * **Slipping Customer Flags:** Created frequency thresholds using SQL to reveal customer cohorts showing early signs of churn risk, enabling the operations team to deploy automated retention workflows.
 * **Optimized Marketing Triggers:** Uncovered clear trends in purchasing behavior linked to explicit customer demographics, informing precise cross-selling strategies.
 
+## Dashboard preview 
+<img width="1169" height="626" alt="Screenshot 2026-04-29 094127" src="https://github.com/user-attachments/assets/b22fe0a9-88cd-43d6-b31f-961c55e1544b" />
 
 
 
