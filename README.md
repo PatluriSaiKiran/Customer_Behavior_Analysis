@@ -1,8 +1,6 @@
 # End-to-End Retail Data Analytics Pipeline (Customer Shopping Trends)
 
 ## 📌 Project Overview & Strategic Business Value
-In large enterprise environments, data analysts rarely perform statistical charting inside a Jupyter Notebook for corporate stakeholders. Instead, they build scalable, multi-layered data pipelines. 
-
 This project simulates a real-world corporate analytics workflow across three distinct environments:
 1. **Python (Data Engineering/ETL):** Automatically extracting, profiling, and cleaning raw, messy customer behavior logs.
 2. **SQL (Analytical Processing):** Ingesting the structured datasets into a relational database to run complex analytical business queries (CTEs, Window Functions) to uncover purchasing drivers.
